@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api/users',
+  baseURL: 'https://threew-leaderboard-task-1.onrender.com/api/users',
 });
 
 export default API;
