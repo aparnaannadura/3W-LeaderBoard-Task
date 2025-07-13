@@ -1,4 +1,3 @@
-
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -8,7 +7,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+// ✅ Allow only Vercel frontend
+app.use(cors({
+  origin: 'https://3-w-leader-board-task.vercel.app',
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Routes
